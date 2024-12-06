@@ -19,22 +19,22 @@ if ("serviceWorker" in navigator) {
     });
 }
 
-const scrollToTopBtn = document.getElementById('scrollToTop');
+// const scrollToTopBtn = document.getElementById('scrollToTop');
 
-window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 300) {
-        scrollToTopBtn.style.display = 'flex';
-    } else {
-        scrollToTopBtn.style.display = 'none';
-    }
-});
+// window.addEventListener('scroll', () => {
+//     if (window.pageYOffset > 300) {
+//         scrollToTopBtn.style.display = 'flex';
+//     } else {
+//         scrollToTopBtn.style.display = 'none';
+//     }
+// });
 
-scrollToTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
+// scrollToTopBtn.addEventListener('click', () => {
+//     window.scrollTo({
+//         top: 0,
+//         behavior: 'smooth'
+//     });
+// });
 
 document.addEventListener('DOMContentLoaded', () => {
     AOS.init({
