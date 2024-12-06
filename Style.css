@@ -1,0 +1,375 @@
+:root {
+    --primary-color: #FFB6C1; /* Light Pink */
+    --secondary-color: #B0E0E6; /* Powder Blue */
+    --accent-color: #98FB98; /* Pale Green */
+    --text-color: #4A4A4A;
+    --background-color: #FFFFFF;
+    --card-background: #F8F8F8;
+    --wave-color: #FFD1DC; /* Pastel Pink for waves */
+    --sidebar-color: #FFF0F5; /* Lavender blush for sidebar */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    overflow-x: hidden;
+    padding-bottom: 150px; /* Ajusta este valor según la altura de tu ola inferior */
+    padding-top: 150px; /* Ajusta este valor según la altura de tu ola superior */
+}
+
+.layout {
+    display: flex;
+    min-height: calc(100vh - 300px); /* Ajusta este valor según la altura de tus olas */
+}
+
+.sidebar {
+    width: 300px;
+    background-color: var(--sidebar-color);
+    padding: 2rem;
+    position: fixed;
+    height: calc(100vh - 300px); /* Ajusta este valor según la altura de tus olas */
+    overflow-y: auto;
+    z-index: 10;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.content {
+    flex-grow: 1;
+    margin-left: 300px;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 4px solid var(--primary-color);
+}
+
+.sidebar h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.sidebar .subtitle {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.nav-links {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.nav-links li {
+    margin-bottom: 0.5rem;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.contact-info {
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+}
+
+.contact-info p {
+    margin-bottom: 0.5rem;
+}
+
+.contact-info i {
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+section {
+    margin-bottom: 4rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.skills-list li {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* Estilo de las tarjetas de proyecto */
+.project-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Ajustar tamaño de las imágenes en las tarjetas */
+.project-image {
+    width: 100%; /* Ocupa todo el ancho de la tarjeta */
+    height: 200px; /* Ajustar el alto según el diseño */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
+    border-bottom: 4px solid var(--primary-color); /* Agregar un borde opcional debajo de la imagen */
+}
+
+/* Estilos de título y texto de las tarjetas */
+.project-card h3 {
+    font-size: 1.2rem;
+    margin: 1rem;
+    color: var(--primary-color);
+}
+
+.project-card p {
+    margin: 0 1rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* Ajustes para los enlaces dentro de la tarjeta */
+.project-links {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+}
+
+
+#contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    background-color: var(--card-background);
+}
+
+textarea {
+    height: 150px;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+.wave {
+    position: fixed;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.wave-top {
+    top: 0;
+    left: 0;
+}
+
+.wave-bottom {
+    bottom: 0;
+    left: 0;
+}
+
+.wave svg {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .layout {
+        flex-direction: column;
+        min-height: calc(100vh - 200px);
+    }
+
+    .sidebar {
+        width: 100%;
+        height:auto;
+        position: static;
+        padding: 1rem;
+        overflow-y: visible;
+    }
+
+    .sidebar-content {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .nav-links li {
+        margin-bottom: 0;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .wave {
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .layout {
+        min-height: calc(100vh - 100px);
+    }
+
+    .sidebar-content {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-list li {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    .project-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .wave {
+        height: 50px;
+    }
+}
+

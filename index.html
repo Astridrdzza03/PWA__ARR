@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio">
+    <meta name="keywords" content="Astrid Jimena Rodriguez Ramirez,desarrolladora de software.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@400;500&display=swap">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="manifest" href="/PWA__ARR/manifest.json">
+    <title>P O R T A F O L I O </title>
+</head>
+<body>
+    <div class="wave wave-top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+            <path fill="var(--wave-color)" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,224C384,224,480,192,576,176C672,160,768,160,864,176C960,192,1056,224,1152,213.3C1248,203,1344,149,1392,122.7L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+        </svg>
+    </div>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <img src="/img/icono.jpeg" alt="Foto de Astrid Rodríguez" class="profile-photo">
+                <h1>Astrid Jimena Rodríguez Ramírez</h1>
+                <p class="subtitle">Desarrolladora de Software</p>
+                
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#about">Sobre mí</a></li>
+                        <li><a href="#skills">Habilidades</a></li>
+                        <li><a href="#projects">Proyectos</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                    </ul>
+                </nav>
+
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> jimenardzza@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +52 8342566492</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Rincon de Romos, Aguascalientes</p>
+                </div>
+
+                <div class="social-links">
+                    <a href="mailto:jimenardzza@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://github.com/Astridrdzza03" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/jimena-rodriguez-77b6a02b4/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </aside>
+
+        <main class="content">
+            <section id="about">
+                <h2>Sobre mí</h2>
+                <p>Soy una apasionada desarrolladora de software con experiencia en crear aplicaciones modernas e intuitivas. Mi enfoque está en brindar soluciones innovadoras utilizando las últimas tecnologías. Me especializo en el desarrollo web y móvil, creando experiencias de usuario excepcionales que son tanto funcionales como atractivas. Mi objetivo es construir aplicaciones que no solo resuelvan problemas, sino que también sean fáciles de usar y accesibles para todos.</p>
+                <p>He trabajado con tecnologías como <strong>JavaScript</strong>, <strong>React</strong>, <strong>Node.js</strong> y <strong>Python</strong>, siempre buscando mejorar y aprender nuevas herramientas. Me apasiona el desarrollo ágil y la integración de buenas prácticas de desarrollo, como el uso de control de versiones y pruebas automatizadas, para garantizar un código limpio y eficiente.</p>
+                <p>Además de mis habilidades técnicas, también tengo experiencia trabajando en equipos multidisciplinarios, colaborando estrechamente con diseñadores y otros desarrolladores para crear productos de alta calidad. Me gusta enfrentar nuevos desafíos y siempre estoy buscando oportunidades para mejorar mis habilidades y aprender más sobre el vasto campo del desarrollo de software.</p>
+            </section>
+            
+
+            <section id="skills">
+                <h2>Habilidades</h2>
+                <ul class="skills-list">
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Node.js</li>
+                    <li>Python</li>
+                    <li>Unity</li>
+                    <li>C#</li>
+                </ul>
+            </section>
+
+            <section id="projects">
+                <h2>Proyectos</h2>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <img src="/img/dark.jpeg" alt="Sitio Web de Ventas" class="project-image">
+                        <h3>Aplicación Movil</h3>
+                        <p>Videjuego de una casa de apuestas</p>
+                        <div class="project-links">
+                            <a href="https://github.com/EdgeSlayer1997/Beat-Alls" class="btn">Ver en GitHub</a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <img src="/img/hidro.jpeg" alt="Aplicación Móvil" class="project-image">
+                        <h3>Sitio Web</h3>
+                        <p>Plataforma de atencion al cliente sobre pipas de agua.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/EdgeSlayer1997/Dark_Business_API" class="btn">Ver Proyecto</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>Contacto</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar mensaje</button>
+                </form>
+            </section>
+
+            <footer>
+                <p>&copy; 2024 Astrid Rodríguez | Desarrolladora de Software</p>
+            </footer>
+        </main>
+    </div>
+
+    <div class="wave wave-bottom">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+            <path fill="var(--wave-color)" fill-opacity="1" d="M0,96L48,122.7C96,149,192,203,288,213.3C384,224,480,192,576,176C672,160,768,160,864,176C960,192,1056,224,1152,224C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </div>
+
+      
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script
+</body>
+</html>
+
